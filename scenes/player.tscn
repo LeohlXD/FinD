@@ -232,7 +232,7 @@ script = ExtResource("1_g2els")
 position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_wnwbv")
 animation = &"run"
-frame_progress = 0.9553608
+frame_progress = 0.03268341
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
