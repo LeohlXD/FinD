@@ -1,3 +1,7 @@
 res://scripts/player.gd
 res://scenes/player.tscn
 res://scenes/trail.tscn
+res://scenes/main.tscn
+res://scenes/item.tscn
+res://scripts/planet/planet.gd
+res://scenes/planet.tscn
