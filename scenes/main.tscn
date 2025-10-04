@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://b7rr7xpc8u3k4"]
+[gd_scene load_steps=4 format=3 uid="uid://b7rr7xpc8u3k4"]
 
 [ext_resource type="PackedScene" uid="uid://br2nbmx2oeawv" path="res://scenes/player.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://c0f5pl2m5ki5x" path="res://scenes/planet.tscn" id="2_0wfyh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
 size = Vector2(356, 72)
@@ -10,8 +11,18 @@ size = Vector2(356, 72)
 [node name="Player" parent="." instance=ExtResource("1_o5qli")]
 position = Vector2(80, 79)
 
+[node name="Camera2D" type="Camera2D" parent="Player"]
+process_callback = 0
+limit_smoothed = true
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(170, 147)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-60, 66)
 shape = SubResource("RectangleShape2D_0wfyh")
+
+[node name="Planet" parent="." instance=ExtResource("2_0wfyh")]
+position = Vector2(211, 65)
